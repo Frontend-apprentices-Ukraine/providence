@@ -1,0 +1,33 @@
+@font-face {
+  font-family: LatoRegular;
+  src: url(../fonts/Lato-Regular.woff);
+}
+
+.main-head {
+  font-family: serif;
+  font-size: 0.05208vw;
+  line-height: 0.05208vw;
+}
+
+.main-text {
+  font-family: serif;
+  font-size: 0.05208vw;
+  line-height: 0.05208vw;
+}
+
+.main-btn {
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 20px;
+  background-color: 1;
+  max-width: 0.05208vw;
+  border-color: black;
+}
+
+html {
+  background-color: aqua;
+  font-family: LatoRegular;
+  color: black;
+  font-size: 50px;
+}
+/*# sourceMappingURL=style.css.map */

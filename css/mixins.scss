@@ -1,0 +1,23 @@
+@import "varibles.scss";
+@import "functions.scss";
+
+@mixin main-head($fs, $lh) {
+  font-family: serif;
+  font-size: calc_size($fs);
+  line-height: calc_size($lh);
+}
+
+@mixin main-text($fs, $lh) {
+  font-family: serif;
+  font-size: calc_size($fs);
+  line-height: calc_size($lh);
+}
+@mixin main-btn($bgc, $w, $brdCl) {
+  //font-family: include in variable, else compiler won`t run;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 20px;
+  background-color: $bgc;
+  max-width: calc_size($w);
+  border-color: $brdCl;
+}
