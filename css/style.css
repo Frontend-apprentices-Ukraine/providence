@@ -137,6 +137,7 @@ header .nav-container .head-menu .menu-item a {
   text-transform: capitalize;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: #8c8f94;
 }
 
 header .nav-container .head-menu .menu-item a:hover {

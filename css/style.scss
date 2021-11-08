@@ -75,6 +75,7 @@ header {
           @include main-text(16, 20);
           text-transform: capitalize;
           transition: 0.4s;
+          color: $gray;
           &:hover {
             color: $blue;
           }
