@@ -1,4 +1,29 @@
 @font-face {
-    font-family: LatoRegular;
-    src: url(../fonts/Lato-Regular.woff);
+  font-family: "Lato Light";
+  src: url("../fonts/Lato-Light.eot");
+  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato-Light.woff") format("woff"),
+    url("../fonts/Lato-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../fonts/Lato-Regular.eot");
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato-Regular.woff") format("woff"),
+    url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Varela Round";
+  src: url("../fonts/VarelaRound-Regular.eot");
+  src: local("../fonts/Varela Round Regular"), local("VarelaRound-Regular"),
+    url("../fonts/VarelaRound-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/VarelaRound-Regular.woff2") format("woff2"),
+    url("../fonts/VarelaRound-Regular.woff") format("woff"),
+    url("../fonts/VarelaRound-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
