@@ -1,6 +1,10 @@
 @import "varibles.scss";
 @import "functions.scss";
-
+@mixin protected-head {
+  font-family: $latoLight;
+  font-size: $fs;
+  line-height: $lh;
+}
 @mixin main-head($fs, $lh) {
   font-family: $varelaRegular;
   font-size: calc_size($fs);
@@ -14,14 +18,20 @@
 }
 @mixin btn-text {
   font-family: $latoRegular;
-  font-size: 16px;
+  font-size: calc_size(16);
   font-weight: 400;
 }
 @mixin main-btn($bgc, $w, $brdCl) {
   @include btn-text;
-  //font-family: include in variable, else compiler won`t run;
   border-radius: 20px;
   background-color: $bgc;
   width: calc_size($w);
   border-color: $brdCl;
+  cursor: pointer;
+}
+@mixin header-head($ff, $fz, $lh) {
+  font-family: $ff;
+  font-size: calc_size($fz);
+  line-height: calc_size($lh);
+  color: $black200;
 }
