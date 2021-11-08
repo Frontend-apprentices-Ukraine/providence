@@ -40,14 +40,14 @@ img {
 
 .main-head {
   font-family: "Varela Round", sans-serif;
-  font-size: 0.08547vw;
-  line-height: 0.08547vw;
+  font-size: 0.05208vw;
+  line-height: 0.05208vw;
 }
 
 .main-text {
   font-family: "Lato Regular", sans-serif;
-  font-size: 1.7094vw;
-  line-height: 2.39316vw;
+  font-size: 1.04167vw;
+  line-height: 1.45833vw;
   color: #8c8f94;
 }
 
@@ -110,8 +110,8 @@ header .nav-container .head-menu .menu-item {
 
 header .nav-container .head-menu .menu-item a {
   font-family: "Lato Regular", sans-serif;
-  font-size: 1.36752vw;
-  line-height: 1.7094vw;
+  font-size: 0.83333vw;
+  line-height: 1.04167vw;
   text-transform: capitalize;
   color: #26272d;
   -webkit-transition: 0.4s;
@@ -125,19 +125,19 @@ header .nav-container .head-menu .menu-item a:hover {
 header .nav-container .head-menu .main-btn {
   border: none;
   cursor: pointer;
-  padding: 10px 1.88034vw;
+  padding: 10px 1.14583vw;
   font-family: "Lato Regular", sans-serif;
   font-size: 16px;
   font-weight: 400;
   border-radius: 20px;
   background-color: #267df4;
-  width: 11.96581vw;
+  width: 7.29167vw;
   border-color: none;
   color: #fff;
 }
 
 header .nav-container .head-menu .main-btn span {
-  padding-left: 1.11111vw;
+  padding-left: 0.67708vw;
   vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */

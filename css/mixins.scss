@@ -19,7 +19,6 @@
 }
 @mixin main-btn($bgc, $w, $brdCl) {
   @include btn-text;
-  //font-family: include in variable, else compiler won`t run;
   border-radius: 20px;
   background-color: $bgc;
   width: calc_size($w);
