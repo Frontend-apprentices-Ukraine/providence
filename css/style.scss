@@ -41,6 +41,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 115px;
     .head-menu {
       display: inline-flex;
       justify-content: space-between;
@@ -73,6 +74,17 @@ header {
           &:hover {
             color: $gray800;
           }
+        }
+      }
+      .main-btn {
+        border: none;
+        cursor: pointer;
+        padding: 10px calc_size(22);
+        @include main-btn($blue, 140, none);
+        color: $white;
+        span {
+          padding-left: calc_size(13);
+          vertical-align: middle;
         }
       }
     }

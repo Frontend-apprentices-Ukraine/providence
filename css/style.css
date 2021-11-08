@@ -40,14 +40,14 @@ img {
 
 .main-head {
   font-family: "Varela Round", sans-serif;
-  font-size: 0.05208vw;
-  line-height: 0.05208vw;
+  font-size: 0.08547vw;
+  line-height: 0.08547vw;
 }
 
 .main-text {
   font-family: "Lato Regular", sans-serif;
-  font-size: 1.04167vw;
-  line-height: 1.45833vw;
+  font-size: 1.7094vw;
+  line-height: 2.39316vw;
   color: #8c8f94;
 }
 
@@ -68,6 +68,7 @@ header .nav-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 115px;
 }
 
 header .nav-container .head-menu {
@@ -109,8 +110,8 @@ header .nav-container .head-menu .menu-item {
 
 header .nav-container .head-menu .menu-item a {
   font-family: "Lato Regular", sans-serif;
-  font-size: 0.83333vw;
-  line-height: 1.04167vw;
+  font-size: 1.36752vw;
+  line-height: 1.7094vw;
   text-transform: capitalize;
   color: #26272d;
   -webkit-transition: 0.4s;
@@ -119,5 +120,24 @@ header .nav-container .head-menu .menu-item a {
 
 header .nav-container .head-menu .menu-item a:hover {
   color: #a2a3a5;
+}
+
+header .nav-container .head-menu .main-btn {
+  border: none;
+  cursor: pointer;
+  padding: 10px 1.88034vw;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 20px;
+  background-color: #267df4;
+  width: 11.96581vw;
+  border-color: none;
+  color: #fff;
+}
+
+header .nav-container .head-menu .main-btn span {
+  padding-left: 1.11111vw;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=style.css.map */
