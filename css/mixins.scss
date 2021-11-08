@@ -2,22 +2,26 @@
 @import "functions.scss";
 
 @mixin main-head($fs, $lh) {
-  font-family: serif;
+  font-family: $varelaRegular;
   font-size: calc_size($fs);
   line-height: calc_size($lh);
 }
 
 @mixin main-text($fs, $lh) {
-  font-family: serif;
+  font-family: $latoRegular;
   font-size: calc_size($fs);
   line-height: calc_size($lh);
 }
-@mixin main-btn($bgc, $w, $brdCl) {
-  //font-family: include in variable, else compiler won`t run;
+@mixin btn-text {
+  font-family: $latoRegular;
   font-size: 16px;
   font-weight: 400;
+}
+@mixin main-btn($bgc, $w, $brdCl) {
+  @include btn-text;
+  //font-family: include in variable, else compiler won`t run;
   border-radius: 20px;
   background-color: $bgc;
-  max-width: calc_size($w);
+  width: calc_size($w);
   border-color: $brdCl;
 }

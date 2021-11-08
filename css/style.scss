@@ -5,6 +5,14 @@
 @import "functions.scss";
 
 // common styles
+a {
+  text-decoration: none;
+}
+picture,
+img {
+  height: auto;
+  max-width: 100%;
+}
 .container {
   max-width: 1190px;
   padding: 0 10px;
@@ -18,18 +26,67 @@
 }
 
 .main-text {
-  @include main-text(
-    1,
-    1
-  ); // - arguments inserted to show that compiler works properly, else gets error
-}
-
-.main-btn {
-  @include main-btn(
-    1,
-    1,
-    black
-  ); // - arguments inserted to show that compiler works properly, else gets error
+  @include main-text(20, 28);
+  color: $gray; // - arguments inserted to show that compiler works properly, else gets error
 }
 
 //test if css link and font link are properly attached to html, delete if color and font appears properly
+header {
+  padding: 56px 0 0 0;
+  background-image: url(../img/header-bg.jpg);
+
+  background-size: cover;
+  background-position: center center;
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 115px;
+    .head-menu {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      .btn {
+        position: relative;
+        height: 13px;
+        width: 20px;
+        border-top: 2px solid $black;
+        border-bottom: 2px solid $black;
+        cursor: pointer;
+        margin-right: 10px;
+        .row {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          height: 2px;
+          width: 100%;
+          background-color: $black;
+        }
+      }
+      .menu-item {
+        padding: 0 20px;
+        a {
+          @include main-text(16, 20);
+          text-transform: capitalize;
+          color: $black200;
+          transition: 0.4s;
+          &:hover {
+            color: $gray800;
+          }
+        }
+      }
+      .main-btn {
+        border: none;
+        cursor: pointer;
+        padding: 10px calc_size(22);
+        @include main-btn($blue, 140, none);
+        color: $white;
+        span {
+          padding-left: calc_size(13);
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
