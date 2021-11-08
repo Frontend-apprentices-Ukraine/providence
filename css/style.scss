@@ -35,4 +35,35 @@
 //test if css link and font link are properly attached to html, delete if color and font appears properly
 header {
   padding: 56px 0 0 0;
+  background-image: url(../img/header-bg.jpg);
+  background-image: url(../img/header-bg.webp);
+  background-image: url(../img/header-bg.avif);
+  background-size: cover;
+  background-position: center center;
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .head-menu {
+      display: inline-flex;
+      justify-content: space-between;
+      .btn {
+        position: relative;
+        height: 13px;
+        width: 20px;
+        border-top: 2px solid $black;
+        border-bottom: 2px solid $black;
+        cursor: pointer;
+        .row {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          height: 2px;
+          width: 100%;
+          background-color: $black;
+        }
+      }
+    }
+  }
 }

@@ -48,4 +48,54 @@
   max-width: 0.05208vw;
   border-color: black;
 }
+
+header {
+  padding: 56px 0 0 0;
+  background-image: url(../img/header-bg.jpg);
+  background-image: url(../img/header-bg.webp);
+  background-image: url(../img/header-bg.avif);
+  background-size: cover;
+  background-position: center center;
+}
+
+header .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav-container .head-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .nav-container .head-menu .btn {
+  position: relative;
+  height: 13px;
+  width: 20px;
+  border-top: 2px solid #1b1c1e;
+  border-bottom: 2px solid #1b1c1e;
+  cursor: pointer;
+}
+
+header .nav-container .head-menu .btn .row {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background-color: #1b1c1e;
+}
 /*# sourceMappingURL=style.css.map */
