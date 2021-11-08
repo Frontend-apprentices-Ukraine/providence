@@ -5,22 +5,31 @@
 @import "functions.scss";
 
 // common styles
+.container {
+  max-width: 1190px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
 .main-head {
-  @include main-head(1, 1); // - arguments inserted to show that compiler works properly, else gets error
+  @include main-head(
+    1,
+    1
+  ); // - arguments inserted to show that compiler works properly, else gets error
 }
 
 .main-text {
-  @include main-text(1, 1); // - arguments inserted to show that compiler works properly, else gets error
+  @include main-text(
+    1,
+    1
+  ); // - arguments inserted to show that compiler works properly, else gets error
 }
 
 .main-btn {
-  @include main-btn(1, 1, black); // - arguments inserted to show that compiler works properly, else gets error
+  @include main-btn(
+    1,
+    1,
+    black
+  ); // - arguments inserted to show that compiler works properly, else gets error
 }
 
 //test if css link and font link are properly attached to html, delete if color and font appears properly
-html {
-  background-color: aqua;
-  font-family: LatoRegular;
-  color: black;
-  font-size: 50px;
-}
