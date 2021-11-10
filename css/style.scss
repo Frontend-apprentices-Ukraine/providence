@@ -18,6 +18,48 @@ img {
   padding: 0 10px;
   margin: 0 auto;
 }
+
+.searchbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px $grey-border;
+    border-radius: 30px;
+    padding: calc_size(4) calc_size(6) calc_size(4) calc_size(26);
+    margin-bottom: calc_size(24);
+    width: calc_size(502);
+  }
+
+  .searchline {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    @include main-text(16, 16);
+  }
+
+  input::placeholder {
+    @include main-text(16, 16);
+    color: $placeholder;
+  }
+
+  .main-btn {
+    @include main-btn($green, 163, none);
+    border-radius: 30px;
+    font-size: calc_size(16);
+    color: $white;
+    outline: none;
+    border: none;
+    padding: calc_size(16) 0;
+    cursor: pointer;
+  }
+}
+
 .main-head {
   @include main-head(
     1,
@@ -74,7 +116,6 @@ html {
 
     .phones {
       width: calc_size(320);
-      height: calc_size(567);
       -webkit-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
       -moz-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
       box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
@@ -106,51 +147,14 @@ html {
   .main-text {
     padding-bottom: calc_size(24);
   }
-  .searchbar-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
 
-    .search-bar {
-      display: flex;
-      justify-content: space-between;
-      border: solid 1px $grey-border;
-      border-radius: 30px;
-      padding: calc_size(4) calc_size(6) calc_size(4) calc_size(26);
-      margin-bottom: calc_size(24);
-      width: calc_size(502);
-    }
+  .searchline {
+    background-color: $gray-background;
+  }
 
-    .searchline {
-      outline: none;
-      border: none;
-      background-color: $gray-background;
-      text-decoration: none;
-      @include main-text(16, 16);
-    }
-
-    input::placeholder {
-      @include main-text(16, 16);
-      color: $placeholder;
-    }
-
-    .main-btn {
-      @include main-btn($green, 163, none);
-      border-radius: 30px;
-      font-size: calc_size(16);
-      color: $white;
-      outline: none;
-      border: none;
-      padding: calc_size(16) 0;
-      cursor: pointer;
-    }
-
-    .apple-button {
-      width: calc_size(211);
-      padding-bottom: calc_size(131);
-    }
+  .apple-button {
+    width: calc_size(211);
+    padding-bottom: calc_size(131);
   }
 }
 
@@ -166,11 +170,16 @@ html {
     padding-right: calc_size(130);
   }
 
+  .right-arrow {
+    width: calc_size(23);
+  }
+
   .people {
     padding-right: calc_size(133);
 
     :nth-child(3) {
       border-radius: 50%;
+      width: calc_size(200);
     }
   }
 }
@@ -377,6 +386,119 @@ html {
         padding: calc_size(12) 0;
         cursor: pointer;
       }
+    }
+  }
+}
+
+.subscribe {
+  .container {
+    border-bottom: solid 1px;
+    border-color: $gray500;
+    .main-head {
+      padding-top: calc_size(91);
+      @include main-head(42, 52);
+      text-align: center;
+      padding-bottom: calc_size(51);
+    }
+
+    .search-bar {
+      margin-bottom: calc_size(30);
+    }
+    .main-text {
+      @include main-text(14, 24);
+      padding-bottom: calc_size(90);
+    }
+  }
+}
+
+.newprovidence-flex {
+  display: flex;
+  padding: calc-size(91) 0;
+  border-bottom: solid 1px $gray500;
+
+  .new-providence {
+    display: flex;
+    flex-direction: column;
+    padding-right: calc_size(334);
+
+    .newprovidence-img {
+      width: calc_size(140);
+      padding-bottom: calc_size(37);
+    }
+
+    .main-text {
+      @include main-text(14, 24);
+      padding-bottom: calc_size(37);
+    }
+    .apple-button {
+      width: calc_size(142);
+      padding-bottom: calc_size(42);
+    }
+
+    .icons {
+      display: flex;
+      column-gap: calc_size(30);
+    }
+  }
+}
+
+.three-columns {
+  display: flex;
+  justify-content: space-between;
+  column-gap: calc_size(102);
+  .coulumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc_size(7);
+
+    .title {
+      @include main-text(16, 36);
+      text-transform: uppercase;
+      color: $black;
+    }
+    .items {
+      @include main-text(16, 36);
+      color: $gray;
+    }
+  }
+}
+
+.contact-design {
+  display: flex;
+  justify-content: space-between;
+  padding: calc_size(41) 0;
+
+  .content-contact {
+    display: flex;
+    column-gap: calc_size(5);
+    padding-top: calc_size(10);
+
+    .main-text {
+      @include main-text(14, 24);
+      text-transform: none;
+      color: $gray;
+    }
+
+    .link {
+      text-decoration: underline;
+      @include main-text(14, 24);
+      color: $blue;
+    }
+  }
+
+  .made-with {
+    display: flex;
+    align-items: center;
+    column-gap: calc_size(15);
+
+    .main-text {
+      @include main-text(15, 22);
+      padding-top: calc_size(8);
+      text-transform: uppercase;
+      color: black;
+    }
+    .craftwork{
+      width: calc_size(150);
     }
   }
 }
