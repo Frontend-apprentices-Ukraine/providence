@@ -9,52 +9,11 @@
     <title>New Providence</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <nav class="nav-container">
-          <ul class="head-menu">
-            <li class="btn">
-              <div class="row"></div>
-            </li>
-            <li class="menu-item"><a href="#">tour</a></li>
-            <li class="menu-item"><a href="#">feachers</a></li>
-            <li class="menu-item"><a href="#">pricing</a></li>
-          </ul>
-          <a href="index.html" class="logo"
-            ><img src="img/svg/logo.svg" alt="logotype"
-          /></a>
-          <ul class="head-menu">
-            <li class="menu-item"><a href="#">help</a></li>
-            <li class="menu-item"><a href="#">contacts</a></li>
-            <li class="menu-item">
-              <button class="main-btn">
-                <img src="img/svg/apple-icon.svg" alt="aple icon" /><span
-                  >Get App</span
-                >
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <h1 class="header-head">What happens tomorrow?</h1>
-        <p class="main-text">
-          The sight of the tumblers restored Bob Sawyer to a degree of
-          equanimity which he had not possessed since his interview with his
-          landlady. His face brightened up, and he began to feel quite
-          convivial.
-        </p>
-        <button class="main-btn">watch video</button>
-        <picture>
-          <source srcset="img/iphone-6.webp" />
-          <source srcset="img/iphone-6.avif" />
-          <img src="img/iPhone-6.png" alt="iphone image" />
-        </picture>
-      </div>
-    </header>
     <section class="beautiful-interface">
       <h2 class="main-head">Beautiful Interface</h2>
-      <p class="main-text"></p>
+      <p class="main-text">landing screen</p>
       <div class="images-container">
-        <picture class="phones">
+        <picture class="phones left-phones">
           <source srcset="img/screen-1.webp" />
           <source srcset="img/screen-1.avif" />
           <img src="img/screen-1.jpg" alt="screen1 image" />
@@ -64,17 +23,17 @@
           <source srcset="img/screen-2.avif" />
           <img src="img/screen-2.jpg" alt="screen2 image" />
         </picture>
-        <picture class="phones">
+        <picture class="small-phone">
           <source srcset="img/screen-3.webp" />
           <source srcset="img/screen-3.avif" />
-          <img src="img/screen-3.jpg" alt="screen3 image" />
+          <img src="img/screen-3.png" alt="screen3 image" />
         </picture>
         <picture class="phones">
           <source srcset="img/screen-4.webp" />
           <source srcset="img/screen-4.avif" />
           <img src="img/screen-4.jpg" alt="screen4 image" />
         </picture>
-        <picture class="phones">
+        <picture class="phones right-phones">
           <source srcset="img/screen-5.webp" />
           <source srcset="img/screen-5.avif" />
           <img src="img/screen-5.jpg" alt="screen5 image" />
@@ -83,32 +42,34 @@
       <div class="newprovidence">
         <p class="main-text">newprovidence</p>
         <h2 class="main-head">Get it to your smartphone</h2>
-        <div class="searchbar">
-          <input
-            type="email"
-            class="searchline"
-            placeholder="denis@getcraftwork.com"
-          />
-          <button class="main-btn btn-text">Send Invite</button>
+        <div class="searchbar-wrapper">
+          <div class="search-bar">
+            <input
+              type="email"
+              class="searchline"
+              placeholder="denis@getcraftwork.com"
+            />
+            <button class="main-btn">Send Invite</button>
+          </div>
           <p class="main-text">or download from</p>
+          <a href="#" class="apple-button">
+            <picture class="app-store">
+              <source srcset="img/appstore_button.webp" />
+              <source srcset="img/appstore_button.avif" />
+              <img src="img/appstore_button.jpg" alt="appstore" />
+            </picture>
+          </a>
         </div>
-        <a href="#" class="apple-button">
-          <picture class="app-store">
-            <source srcset="img/appstore_button.webp" />
-            <source srcset="img/appstore_button.avif" />
-            <img src="img/appstore_button.jpg" alt="appstore" />
-          </picture>
-        </a>
       </div>
     </section>
     <section class="great-kit">
       <div class="container">
         <div class="slider">
-          <a href="arrows_links"
+          <a href="arrows"
             ><img
               src="./img/svg/Arrow_left.svg"
               alt="left arrow"
-              class="arrows"
+              class="left-arrow"
           /></a>
           <div class="slider-photos">
             <picture class="people">
@@ -126,20 +87,21 @@
               <source srcset="img/user-3.avif" />
               <img src="img/user-3.jpg" alt="user-3" />
             </picture>
-            <a href="#"
-              ><img
-                src="./img/svg/arrow_right.svg"
-                alt="right arrow"
-                class="arrows"
-            /></a>
           </div>
+          <a href="#"
+            ><img
+              src="./img/svg/arrow_right.svg"
+              alt="right arrow"
+              class="right-arrow"
+          /></a>
         </div>
         <div class="content">
           <h2 class="main-head">New Providence is the great UI kit</h2>
           <p class="main-text">
             ”Just then her head struck against the roof of the hall: in fact she
-            was now more than nine feet high, and she at once took up the little
-            golden key and hurried off to the garden door.”
+            <br />
+            was now more than nine feet high, and she at once took up the <br />
+            little golden key and hurried off to the garden door.”
           </p>
           <div class="stars">
             <img src="./img/svg/star-icon.svg" alt="star" class="star" />
@@ -148,7 +110,7 @@
             <img src="./img/svg/star-icon.svg" alt="star" class="star" />
             <img src="./img/svg/star-icon.svg" alt="star" class="star" />
           </div>
-          <p class="main-text">cameron downman</p>
+          <p class="main-text cameron">cameron downman</p>
         </div>
       </div>
     </section>
@@ -156,58 +118,80 @@
       <div class="container">
         <div class="plan-flexbox">
           <div class="you-are">
-            <h2 class="main-head">Choose your perfect plan</h2>
+            <h2 class="main-head">
+              Choose your <br />
+              pefect plan
+            </h2>
             <p class="main-text">you are</p>
             <div class="toggle-container cf">
               <div class="switch-toggles">
-                <div class="individual">Individual</div>
-                <div class="company">Company</div>
+                <div class="individual main-text">Individual</div>
+                <div class="company main-text">Company</div>
               </div>
             </div>
-            <p class="main-text">
-              Thus much I thought proper to tell you in relation to yourself,
-              and to the trust I reposed in you.
+            <p class="main-text slogo">
+              Thus much I thought proper to tell you in <br />
+              relation to yourself, and to the trust I <br />
+              reposed in you.
             </p>
             <span class="bigger-team">
               <p class="main-text">Have a bigger team</p>
-              <a href="#" class="main-text">Let`s talk</a>
+              <a href="#" class="link">Let`s talk</a>
             </span>
           </div>
           <div class="starter">
-            <h2 class="main-head">Starter</h2>
+            <h2 class="main-head starter_h2">Starter</h2>
             <div class="free-container">
               <p class="main-head">free</p>
             </div>
-            <h2 class="main-head">Build your scheduale every day</h2>
+            <h2 class="main-head build">
+              Build your scheduale <br />
+              every day
+            </h2>
             <span class="motto">
               <img src="./img/svg/check-icon.svg" alt="check-icon" />
               <p class="main-text">Unlimited events</p>
             </span>
             <span class="motto">
-              <img src="./img/svg/check-icon.svg" alt="check-icon" />
+              <img
+                src="./img/svg/check-icon.svg"
+                alt="check-icon"
+                class="check-icon"
+              />
               <p class="main-text">Connect DropBox & Evernote</p>
             </span>
             <button class="main-btn btn-text">Get started</button>
           </div>
-          <div class="pro">
-            <h2 class="main-head">Pro</h2>
+          <div class="starter pro">
+            <h2 class="main-head starter_h2">Pro</h2>
             <div class="free-container">
-              <p class="main-head">$ 4.99</p>
+              <p class="main-head">$4.99</p>
             </div>
-            <h2 class="main-head">Make your life better</h2>
+            <h2 class="main-head build">
+              Make your life <br />
+              better
+            </h2>
             <span class="motto">
               <img src="./img/svg/check-icon.svg" alt="check-icon" />
               <p class="main-text">Unlimited events</p>
             </span>
             <span class="motto">
-              <img src="./img/svg/check-icon.svg" alt="check-icon" />
+              <img
+                src="./img/svg/check-icon.svg"
+                alt="check-icon"
+                class="check-icon"
+              />
               <p class="main-text">Connect DropBox & Evernote</p>
             </span>
             <span class="motto">
-              <img src="./img/svg/check-icon.svg" alt="check-icon" />
+              <img
+                src="./img/svg/check-icon.svg"
+                alt="check-icon"
+                class="check-icon"
+              />
               <p class="main-text">Personal assistant</p>
             </span>
-            <button class="main-btn btn-text">Get started</button>
+            <button class="pro">Get started</button>
           </div>
         </div>
       </div>
@@ -274,21 +258,21 @@
             </div>
           </div>
           <div class="three-columns">
-            <div class="learn-more">
+            <div class="coulumn">
               <h2 class="title">learn more</h2>
               <a href="#" class="items">How it works?</a>
               <a href="#" class="items">Meeting tools</a>
               <a href="#" class="items">Live striming</a>
               <a href="#" class="items">Contact method</a>
             </div>
-            <div class="about-us">
+            <div class="coulumn">
               <h2 class="title">about us</h2>
               <a href="#" class="items">About us</a>
               <a href="#" class="items">Features</a>
               <a href="#" class="items">Privacy policy</a>
               <a href="#" class="items">Terms & Conditions</a>
             </div>
-            <div class="support">
+            <div class="coulumn">
               <h2 class="title">support</h2>
               <a href="#" class="items">F.A.Q</a>
               <a href="#" class="items">Contact us</a>

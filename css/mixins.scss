@@ -14,7 +14,7 @@
 }
 @mixin btn-text {
   font-family: $latoRegular;
-  font-size: 16px;
+  font-size: calc_size(16);
   font-weight: 400;
 }
 @mixin main-btn($bgc, $w, $brdCl) {

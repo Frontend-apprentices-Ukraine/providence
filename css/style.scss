@@ -31,61 +31,351 @@ img {
 }
 
 //test if css link and font link are properly attached to html, delete if color and font appears properly
-header {
-  padding: 56px 0 0 0;
-  background-image: url(../img/header-bg.jpg);
 
-  background-size: cover;
-  background-position: center center;
-  .nav-container {
+html {
+  overflow-x: hidden;
+}
+
+.beautiful-interface {
+  padding-top: calc_size(144);
+  background-color: $gray-background;
+
+  .main-head {
+    @include main-head(42, 52);
+    text-align: center;
+    padding-bottom: calc_size(93);
+    position: relative;
+
+    &::after {
+      content: "";
+      height: calc_size(2);
+      width: calc_size(50);
+      background-color: $after;
+      position: absolute;
+      top: calc_size(84);
+      left: calc_size(925);
+    }
+  }
+
+  .main-text {
+    @include main-text(12, 22);
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: calc_size(47);
+  }
+
+  .images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: calc_size(179);
+    column-gap: calc_size(110);
+    background-color: #f5f5f8;
+
+    .phones {
+      width: calc_size(320);
+      height: calc_size(567);
+      -webkit-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
+      -moz-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
+      box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
+    }
+
+    .left-phones {
+      position: absolute;
+      left: -4.3vw;
+    }
+
+    .small-phone {
+      width: calc_size(320);
+      -webkit-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
+      -moz-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
+      box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
+    }
+    .right-phones {
+      position: absolute;
+      left: 86.7vw;
+    }
+  }
+  .main-head {
+    padding-bottom: calc_size(57);
+    &::after {
+      display: none;
+    }
+  }
+
+  .main-text {
+    padding-bottom: calc_size(24);
+  }
+  .searchbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    .search-bar {
+      display: flex;
+      justify-content: space-between;
+      border: solid 1px $grey-border;
+      border-radius: 30px;
+      padding: calc_size(4) calc_size(6) calc_size(4) calc_size(26);
+      margin-bottom: calc_size(24);
+      width: calc_size(502);
+    }
+
+    .searchline {
+      outline: none;
+      border: none;
+      background-color: $gray-background;
+      text-decoration: none;
+      @include main-text(16, 16);
+    }
+
+    input::placeholder {
+      @include main-text(16, 16);
+      color: $placeholder;
+    }
+
+    .main-btn {
+      @include main-btn($green, 163, none);
+      border-radius: 30px;
+      font-size: calc_size(16);
+      color: $white;
+      outline: none;
+      border: none;
+      padding: calc_size(16) 0;
+      cursor: pointer;
+    }
+
+    .apple-button {
+      width: calc_size(211);
+      padding-bottom: calc_size(131);
+    }
+  }
+}
+
+.slider {
+  padding-top: calc_size(130);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: calc_size(79);
+
+  .left-arrow {
+    width: calc_size(23);
+    padding-right: calc_size(130);
+  }
+
+  .people {
+    padding-right: calc_size(133);
+
+    :nth-child(3) {
+      border-radius: 50%;
+    }
+  }
+}
+
+.content {
+  text-align: center;
+
+  .main-head {
+    @include main-head(32, 38);
+    padding-bottom: calc_size(56);
+  }
+
+  .main-text {
+    padding-bottom: calc_size(35);
+  }
+
+  .star {
+    width: calc_size(22);
+    padding-bottom: calc_size(70);
+  }
+
+  .cameron {
+    padding-bottom: calc_size(129);
+    text-transform: uppercase;
+    color: $black;
+    font-size: calc_size(12);
+    line-height: calc_size(22);
+  }
+}
+
+.perfect-plan {
+  background-color: $gray-background;
+  .plan-flexbox {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 115px;
-    .head-menu {
-      display: inline-flex;
-      justify-content: space-between;
-      align-items: center;
-      .btn {
-        position: relative;
-        height: 13px;
-        width: 20px;
-        border-top: 2px solid $black;
-        border-bottom: 2px solid $black;
-        cursor: pointer;
-        margin-right: 10px;
-        .row {
-          position: absolute;
-          top: 50%;
-          left: 0;
-          transform: translateY(-50%);
-          height: 2px;
-          width: 100%;
-          background-color: $black;
+    padding: calc_size(161) 0;
+
+    .you-are {
+      padding-top: 50px;
+      margin-right: calc_size(156);
+      .main-head {
+        @include main-head(42, 52);
+        padding-bottom: calc_size(75);
+      }
+      .main-text {
+        text-transform: uppercase;
+        @include main-text(12, 22);
+        color: $black;
+        padding-bottom: calc_size(27);
+      }
+      .switch-toggles {
+        display: flex;
+        width: calc_size(213);
+        border: 1px solid $grey-border;
+        padding: calc_size(5) calc_size(3);
+        border-radius: calc_size(26);
+        margin-bottom: calc_size(80);
+
+        .individual {
+          padding: calc_size(10) calc_size(28);
+          background-color: $white;
+          border-radius: calc_size(26);
+          -webkit-box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
+          -moz-box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
+          cursor: pointer;
+
+          .main-text {
+            @include main-text(12, 22);
+            text-transform: capitalize;
+          }
+        }
+
+        .company {
+          padding: calc_size(10) calc_size(28);
+          padding: calc_size(10) calc_size(28);
+          border-radius: calc_size(26);
+          cursor: pointer;
+        }
+
+        .main-text {
+          @include main-text(12, 22);
+          text-transform: capitalize;
         }
       }
-      .menu-item {
-        padding: 0 20px;
-        a {
-          @include main-text(16, 20);
-          text-transform: capitalize;
-          color: $black200;
-          transition: 0.4s;
-          &:hover {
-            color: $gray800;
-          }
+      .slogo {
+        @include main-text(20, 28);
+        text-transform: none;
+        color: $gray;
+        padding-bottom: calc_size(51);
+      }
+
+      .bigger-team {
+        display: flex;
+        gap: calc_size(3);
+
+        .main-text {
+          @include main-text(14, 24);
+          text-transform: none;
+          color: $gray;
+        }
+
+        .link {
+          text-decoration: underline;
+          @include main-text(14, 24);
+          color: $blue;
+        }
+      }
+    }
+
+    .starter {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: $white;
+      border-radius: 12px;
+      -webkit-box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
+      box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
+      padding: calc_size(70) calc_size(56);
+      :nth-child(4) {
+        margin-bottom: calc_size(30);
+      }
+      :nth-child(5) {
+        margin-bottom: calc_size(92);
+      }
+
+      .starter_h2 {
+        @include main-head(32, 38);
+        text-align: center;
+        margin-bottom: calc_size(30);
+      }
+
+      .free-container {
+        padding: calc_size(2) 0;
+        border: solid 1px $grey-border;
+        align-self: center;
+        width: calc_size(50);
+        border-radius: 12px;
+        margin-bottom: calc_size(58);
+
+        .main-head {
+          @include main-text(11, 22);
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+
+      .build {
+        @include main-text(20, 28);
+        text-align: center;
+        color: $gray;
+        margin-bottom: calc_size(50);
+      }
+
+      .motto {
+        display: flex;
+
+        .main-text {
+          @include main-text(16, 24);
+          margin-left: calc_size(5);
+          color: $black;
+        }
+
+        .check-icon {
+          width: calc_size(12);
         }
       }
       .main-btn {
-        border: none;
-        cursor: pointer;
-        padding: 10px calc_size(22);
-        @include main-btn($blue, 140, none);
+        align-self: center;
+        @include main-btn($blue, 212, none);
+        border-radius: 30px;
+        font-size: calc_size(16);
         color: $white;
-        span {
-          padding-left: calc_size(13);
-          vertical-align: middle;
-        }
+        outline: none;
+        border: none;
+        padding: calc_size(12) 0;
+        cursor: pointer;
+      }
+    }
+
+    .pro {
+      background-color: $gray900;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      :nth-child(4) {
+        margin-bottom: calc_size(30);
+      }
+      :nth-child(5) {
+        margin-bottom: calc_size(30);
+      }
+      :nth-child(6) {
+        margin-bottom: calc_size(41);
+      }
+      .pro {
+        align-self: center;
+        @include main-btn($gray900, 212, none);
+        border-radius: 30px;
+        font-size: calc_size(16);
+        color: $blue;
+        outline: none;
+        border-color: $blue;
+        padding: calc_size(12) 0;
+        cursor: pointer;
       }
     }
   }
