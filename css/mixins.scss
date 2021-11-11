@@ -6,7 +6,12 @@
   font-size: calc_size($fs);
   line-height: calc_size($lh);
 }
-
+@mixin header-head($ff, $fz, $lh) {
+  font-family: $ff;
+  font-size: calc_size($fz);
+  line-height: calc_size($lh);
+  color: $black200;
+}
 @mixin main-text($fs, $lh) {
   font-family: $latoRegular;
   font-size: calc_size($fs);
