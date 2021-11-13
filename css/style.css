@@ -636,9 +636,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 8.38542vw 0;
 }
 
@@ -903,6 +903,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 4.73958vw 0;
   border-bottom: solid 1px #f4f4f4;
 }
@@ -911,6 +914,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1257,62 +1262,62 @@ html {
     width: 130px;
     padding: 5px 10px;
   }
-  footer .container .newprovidence-flex {
+  footer .newprovidence-flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  footer .container .newprovidence-flex .new-providence .newprovidence-img {
+  footer .newprovidence-flex .new-providence .newprovidence-img {
     width: 100px;
   }
-  footer .container .newprovidence-flex .new-providence .main-text {
+  footer .newprovidence-flex .new-providence .main-text {
     font-size: 12px;
     line-height: 12px;
     padding-bottom: 12px;
   }
-  footer .container .newprovidence-flex .new-providence .apple-button {
+  footer .newprovidence-flex .new-providence .apple-button {
     width: 80px;
     padding-bottom: 12px;
   }
-  footer .container .newprovidence-flex .new-providence .icons {
+  footer .newprovidence-flex .new-providence .icons {
     width: 25px;
     padding-bottom: 8px;
   }
-  footer .container .newprovidence-flex .three-columns .title {
+  footer .newprovidence-flex .three-columns .title {
     font-size: 12px;
     line-height: 13px;
     color: #1b1c1e;
     padding: 7px 0;
   }
-  footer .container .newprovidence-flex .three-columns .items {
+  footer .newprovidence-flex .three-columns .items {
     font-size: 12px;
     line-height: 12px;
     padding-bottom: 5px;
   }
-  footer .container .contact-design {
+  footer .contact-design {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 8px 0;
   }
-  footer .container .contact-design .content-contact {
+  footer .contact-design .content-contact {
     padding-bottom: 8px;
   }
-  footer .container .contact-design .content-contact .main-text {
+  footer .contact-design .content-contact .main-text {
     font-size: 12px;
     line-height: 12px;
   }
-  footer .container .contact-design .content-contact .link {
+  footer .contact-design .content-contact .link {
     font-size: 12px;
     line-height: 12px;
   }
-  footer .container .contact-design .made-with .main-text {
+  footer .contact-design .made-with .main-text {
     font-size: 8px;
     line-height: 8px;
   }
-  footer .container .contact-design .made-with .craftwork {
+  footer .contact-design .made-with .craftwork {
     width: 70px;
   }
 }

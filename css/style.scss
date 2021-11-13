@@ -418,7 +418,7 @@ html {
   background-color: $gray-background;
   .plan-flexbox {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: calc_size(161) 0;
 
     .you-are {
@@ -617,11 +617,13 @@ html {
 
 .newprovidence-flex {
   display: flex;
+  justify-content: center;
   padding: calc-size(91) 0;
   border-bottom: solid 1px $gray500;
 
   .new-providence {
     display: flex;
+    align-self: center;
     flex-direction: column;
     padding-right: calc_size(334);
 
@@ -933,68 +935,66 @@ html {
   }
 
   footer {
-    .container {
-      .newprovidence-flex {
-        flex-direction: column;
-        .new-providence {
-          .newprovidence-img {
-            width: 100px;
-          }
-          .main-text {
-            font-size: 12px;
-            line-height: 12px;
-            padding-bottom: 12px;
-          }
-          .apple-button {
-            width: 80px;
-            padding-bottom: 12px;
-          }
-
-          .icons {
-            width: 25px;
-            padding-bottom: 8px;
-          }
+    .newprovidence-flex {
+      flex-direction: column;
+      .new-providence {
+        .newprovidence-img {
+          width: 100px;
         }
-        .three-columns {
-          .title {
-            font-size: 12px;
-            line-height: 13px;
-            color: $black;
-            padding: 7px 0;
-          }
-          .items {
-            font-size: 12px;
-            line-height: 12px;
-            padding-bottom: 5px;
-          }
+        .main-text {
+          font-size: 12px;
+          line-height: 12px;
+          padding-bottom: 12px;
+        }
+        .apple-button {
+          width: 80px;
+          padding-bottom: 12px;
+        }
+
+        .icons {
+          width: 25px;
+          padding-bottom: 8px;
         }
       }
-      .contact-design {
-        flex-direction: column;
-        padding: 8px 0;
+      .three-columns {
+        .title {
+          font-size: 12px;
+          line-height: 13px;
+          color: $black;
+          padding: 7px 0;
+        }
+        .items {
+          font-size: 12px;
+          line-height: 12px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+    .contact-design {
+      flex-direction: column;
+      padding: 8px 0;
 
-        .content-contact {
-          padding-bottom: 8px;
+      .content-contact {
+        padding-bottom: 8px;
 
-          .main-text {
-            font-size: 12px;
-            line-height: 12px;
-          }
-
-          .link {
-            font-size: 12px;
-            line-height: 12px;
-          }
+        .main-text {
+          font-size: 12px;
+          line-height: 12px;
         }
 
-        .made-with {
-          .main-text {
-            font-size: 8px;
-            line-height: 8px;
-          }
-          .craftwork {
-            width: 70px;
-          }
+        .link {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      .made-with {
+        .main-text {
+          font-size: 8px;
+          line-height: 8px;
+        }
+        .craftwork {
+          width: 70px;
         }
       }
     }
