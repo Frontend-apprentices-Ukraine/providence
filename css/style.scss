@@ -224,6 +224,7 @@ header {
     }
   }
 }
+
 .searchbar-wrapper {
   display: flex;
   align-items: center;
@@ -332,11 +333,9 @@ html {
     }
 
     .small-phone {
-      width: calc_size(320);
-      -webkit-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
-      -moz-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
-      box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
+      max-width: 20%;
     }
+
     .right-phones {
       position: absolute;
       left: 86.7vw;
@@ -704,6 +703,300 @@ html {
     }
     .craftwork {
       width: calc_size(150);
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .searchbar-wrapper {
+    .search-bar {
+      margin-bottom: calc_size(24);
+      width: calc_size(900);
+    }
+  }
+
+  .beautiful-interface {
+    .main-head {
+      font-size: 25px;
+      padding-bottom: 30px;
+    }
+    .main-text {
+      font-size: 20px;
+      padding-bottom: 40px;
+    }
+    .images-container {
+      flex-direction: column;
+      row-gap: 20px;
+      .right-phones {
+        position: static;
+        width: 230px;
+      }
+      .left-phones {
+        position: static;
+        width: 230px;
+      }
+      .small-phone {
+        max-width: 73%;
+      }
+      .phones {
+        width: 230px;
+      }
+    }
+  }
+
+  .subscribe {
+    .container {
+      .main-head {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      .searchbar-wrapper {
+        padding: 0px;
+        .search-bar {
+          padding-left: 8px;
+          margin-bottom: 15px;
+          width: 200px;
+        }
+
+        .searchline {
+          font-size: 10px;
+          line-height: 12px;
+          margin-right: 8px;
+        }
+
+        input::placeholder {
+          line-height: 10px;
+          font-size: 10px;
+        }
+
+        .main-btn {
+          font-size: 12px;
+          width: 130px;
+          cursor: pointer;
+        }
+        .main-text {
+          font-size: 15px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+
+  .slider {
+    .right-arrow {
+      display: none;
+    }
+    .slider-photos {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      .people {
+        :nth-child(3) {
+          width: 200px;
+        }
+      }
+    }
+  }
+  .content {
+    .main-head {
+      font-size: 12px;
+      line-height: 12px;
+    }
+    .main-text {
+      font-size: 9px;
+      line-height: 12px;
+    }
+    .stars {
+      .star {
+        width: 13px;
+      }
+    }
+  }
+  .perfect-plan {
+    .container {
+      .plan-flexbox {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+
+        .you-are {
+          padding-top: 0px;
+          margin-right: 0px;
+          text-align: center;
+          margin-bottom: 15px;
+
+          .main-head {
+            font-size: 14px;
+            line-height: 15px;
+
+            br {
+              display: none;
+            }
+          }
+          .main-text {
+            font-size: 9px;
+            line-height: 11px;
+          }
+
+          .toggle-container {
+            display: flex;
+            justify-content: center;
+            .switch-toggles {
+              width: 220px;
+              .individual {
+                padding: 10px 25px;
+                font-size: 15px;
+                line-height: 15px;
+              }
+
+              .company {
+                padding: 10px 25px;
+                font-size: 15px;
+                line-height: 15px;
+              }
+            }
+          }
+
+          .slogo {
+            font-size: 11px;
+            margin-bottom: 8px;
+          }
+          .bigger-team {
+            justify-content: center;
+            flex-direction: column;
+            gap: 13px;
+            .main-text {
+              font-size: 10px;
+            }
+
+            .link {
+              text-decoration: underline;
+              font-size: 10px;
+            }
+          }
+        }
+
+        .starter {
+          width: 200px;
+          text-align: center;
+          align-items: center;
+          .starter_h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+          }
+          .free-container {
+            width: 50px;
+            padding: 10px 4px;
+            .main-head {
+              font-size: 15px;
+            }
+          }
+
+          .build {
+            font-size: 15px;
+            line-height: 17px;
+          }
+          .motto {
+            .main-text {
+              font-size: 12px;
+              line-height: 14px;
+            }
+
+            .check-icon {
+              width: 10px;
+              padding-right: 5px;
+            }
+          }
+          .main-btn {
+            font-size: 12px;
+            width: 130px;
+            padding: 5px 10px;
+          }
+        }
+        .pro {
+          margin-top: 20px;
+
+          .build {
+            br {
+              display: none;
+            }
+          }
+          .pro {
+            font-size: 12px;
+            width: 130px;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .container {
+      .newprovidence-flex {
+        flex-direction: column;
+        .new-providence {
+          .newprovidence-img {
+            width: 100px;
+          }
+          .main-text {
+            font-size: 12px;
+            line-height: 12px;
+            padding-bottom: 12px;
+          }
+          .apple-button {
+            width: 80px;
+            padding-bottom: 12px;
+          }
+
+          .icons {
+            width: 25px;
+            padding-bottom: 8px;
+          }
+        }
+        .three-columns {
+          .title {
+            font-size: 12px;
+            line-height: 13px;
+            color: $black;
+            padding: 7px 0;
+          }
+          .items {
+            font-size: 12px;
+            line-height: 12px;
+            padding-bottom: 5px;
+          }
+        }
+      }
+      .contact-design {
+        flex-direction: column;
+        padding: 8px 0;
+
+        .content-contact {
+          padding-bottom: 8px;
+
+          .main-text {
+            font-size: 12px;
+            line-height: 12px;
+          }
+
+          .link {
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
+
+        .made-with {
+          .main-text {
+            font-size: 8px;
+            line-height: 8px;
+          }
+          .craftwork {
+            width: 70px;
+          }
+        }
+      }
     }
   }
 }
