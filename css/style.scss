@@ -89,7 +89,7 @@ header {
         align-items: center;
         border: none;
         cursor: pointer;
-        padding: calc_size(10) calc_size(22);
+        padding: 10px 22px;
         @include main-btn($blue, 140, none);
         transition: 0.4s;
         &:hover {
@@ -97,7 +97,7 @@ header {
         }
         color: $white;
         span {
-          padding-left: calc_size(13);
+          padding-left: 13px;
         }
       }
     }
@@ -109,12 +109,13 @@ header {
   }
   .main-text {
     text-align: center;
-    max-width: calc_size(780);
+    max-width: 780px;
     margin-bottom: 60px;
+    color: $;
   }
   .video {
     position: relative;
-    padding: calc_size(17) calc_size(32);
+    padding: 17px 32px;
     text-transform: capitalize;
     color: $black;
     margin-bottom: 505px;
@@ -126,14 +127,14 @@ header {
     }
     &:after {
       position: absolute;
-      top: calc_size(16);
-      left: calc_size(20);
+      top: 16px;
+      left: 20px;
       content: "";
       width: 0;
       height: 0;
-      border-top: calc_size(10) solid transparent;
-      border-bottom: calc_size(10) solid transparent;
-      border-left: calc_size(11) solid $black;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 11px solid $black;
     }
   }
   .head-img {
@@ -159,7 +160,7 @@ header {
       margin-bottom: 51px;
     }
     .main-text-sm {
-      width: calc_size(495);
+      max-width: 495px;
       margin-bottom: 40px;
       color: $gray;
     }
@@ -173,23 +174,23 @@ header {
   overflow: hidden;
   .fluid-image,
   .text-container {
-    min-width: calc_size(500);
+    max-width: 500px;
     .main-head {
       max-width: 230px;
       margin-bottom: 85px;
       text-align: left;
     }
     .main-text {
-      width: calc_size(470);
+      max-width: 470px;
       color: $gray;
       margin-bottom: 45px;
       text-align: left;
-      margin: 0 calc_size(20) 0;
+      margin: 0 20px 0;
     }
     .partners {
       font-family: $latoBold;
-      font-size: calc_size(12);
-      line-height: calc_size(22);
+      font-size: 12px;
+      line-height: 22px;
       font-weight: bold;
       margin-bottom: 35px;
     }
@@ -206,7 +207,7 @@ header {
     .btn-container {
       margin-top: 30px;
       .try {
-        padding: 15px calc_size(18) 15px calc_size(27);
+        padding: 15px 18px 15px 27px;
         color: $white;
         @include main-btn($blue, 203, transparent);
         transition: 0.4s;
@@ -215,7 +216,7 @@ header {
         }
       }
       .learn {
-        padding: 13px calc_size(15);
+        padding: 13px 15px;
         color: $black200;
         border: 1px solid $gray200;
         @include main-btn(transparent, 145, $gray200);
@@ -241,9 +242,9 @@ header {
     justify-content: space-between;
     border: solid 1px $grey-border;
     border-radius: 30px;
-    padding: calc_size(4) calc_size(6) calc_size(4) calc_size(26);
-    margin-bottom: calc_size(24);
-    width: calc_size(502);
+    padding: 4px 6px 4px 26px;
+    margin-bottom: 24px;
+    max-width: 502px;
   }
 
   .searchline {
@@ -261,32 +262,32 @@ header {
   .main-btn {
     @include main-btn($green, 163, none);
     border-radius: 30px;
-    font-size: calc_size(16);
+    font-size: 16px;
     color: $white;
     outline: none;
     border: none;
-    padding: calc_size(16) 0;
+    padding: 16px 0;
     cursor: pointer;
   }
 }
 .beautiful-interface {
-  padding-top: calc_size(144);
+  padding-top: 144px;
   background-color: $gray-background;
 
   .main-head {
     @include main-head(42, 52);
     text-align: center;
-    padding-bottom: calc_size(93);
+    padding-bottom: 93px;
     position: relative;
 
     &::after {
       content: "";
-      height: calc_size(2);
-      width: calc_size(50);
+      height: 2px;
+      width: 50px;
       background-color: $after;
       position: absolute;
-      top: calc_size(84);
-      left: calc_size(925);
+      top: 85px;
+      left: 925px;
     }
   }
 
@@ -294,19 +295,21 @@ header {
     @include main-text(12, 22);
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: calc_size(47);
+    padding-bottom: 47px;
   }
 
   .images-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: calc_size(179);
-    column-gap: calc_size(110);
+    padding-bottom: 180px;
+    column-gap: 110px;
     background-color: #f5f5f8;
+    width: 100vw;
+    overflow: hidden;
 
     .phones {
-      width: calc_size(320);
+      max-width: 320px;
       -webkit-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
       -moz-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
       box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
@@ -327,14 +330,14 @@ header {
     }
   }
   .main-head {
-    padding-bottom: calc_size(57);
+    padding-bottom: 57px;
     &::after {
       display: none;
     }
   }
 
   .main-text {
-    padding-bottom: calc_size(24);
+    padding-bottom: 24px;
   }
 
   .searchline {
@@ -342,33 +345,33 @@ header {
   }
 
   .apple-button {
-    width: calc_size(211);
-    padding-bottom: calc_size(131);
+    width: 210px;
+    padding-bottom: 131px;
   }
 }
 
 .slider {
-  padding-top: calc_size(130);
+  padding-top: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: calc_size(79);
+  padding-bottom: 79px;
 
   .left-arrow {
-    width: calc_size(23);
-    padding-right: calc_size(130);
+    width: 23px;
+    padding-right: 130px;
   }
 
   .right-arrow {
-    width: calc_size(23);
+    width: 23px;
   }
 
   .people {
-    padding-right: calc_size(133);
+    padding-right: 133px;
 
     :nth-child(3) {
       border-radius: 50%;
-      width: calc_size(200);
+      width: 200px;
     }
   }
 }
@@ -378,24 +381,24 @@ header {
 
   .main-head {
     @include main-head(32, 38);
-    padding-bottom: calc_size(56);
+    padding-bottom: 55px;
   }
 
   .main-text {
-    padding-bottom: calc_size(35);
+    padding-bottom: 35px;
   }
 
   .star {
-    width: calc_size(22);
-    padding-bottom: calc_size(70);
+    width: 22px;
+    padding-bottom: 70px;
   }
 
   .cameron {
-    padding-bottom: calc_size(129);
+    padding-bottom: 129px;
     text-transform: uppercase;
     color: $black;
-    font-size: calc_size(12);
-    line-height: calc_size(22);
+    font-size: 12px;
+    line-height: 22px;
   }
 }
 
@@ -404,33 +407,33 @@ header {
   .plan-flexbox {
     display: flex;
     justify-content: center;
-    padding: calc_size(161) 0;
+    padding: 161px 0;
 
     .you-are {
       padding-top: 50px;
-      margin-right: calc_size(156);
+      margin-right: 156px;
       .main-head {
         @include main-head(42, 52);
-        padding-bottom: calc_size(75);
+        padding-bottom: 75px;
       }
       .main-text {
         text-transform: uppercase;
         @include main-text(12, 22);
         color: $black;
-        padding-bottom: calc_size(27);
+        padding-bottom: 27px;
       }
       .switch-toggles {
         display: flex;
-        width: calc_size(213);
+        width: 213px;
         border: 1px solid $grey-border;
-        padding: calc_size(5) calc_size(3);
-        border-radius: calc_size(26);
-        margin-bottom: calc_size(80);
+        padding: 5px 3px;
+        border-radius: 26px;
+        margin-bottom: 80px;
 
         .individual {
-          padding: calc_size(10) calc_size(28);
+          padding: 10px 28px;
           background-color: $white;
-          border-radius: calc_size(26);
+          border-radius: 26px;
           -webkit-box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
           -moz-box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
           box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
@@ -443,9 +446,9 @@ header {
         }
 
         .company {
-          padding: calc_size(10) calc_size(28);
-          padding: calc_size(10) calc_size(28);
-          border-radius: calc_size(26);
+          padding: 10px 28px;
+          padding: 10px 28px;
+          border-radius: 26px;
           cursor: pointer;
         }
 
@@ -458,12 +461,12 @@ header {
         @include main-text(20, 28);
         text-transform: none;
         color: $gray;
-        padding-bottom: calc_size(51);
+        padding-bottom: 51px;
       }
 
       .bigger-team {
         display: flex;
-        gap: calc_size(3);
+        gap: 3px;
 
         .main-text {
           @include main-text(14, 24);
@@ -488,27 +491,27 @@ header {
       -webkit-box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
       -moz-box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
       box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
-      padding: calc_size(70) calc_size(56);
+      padding: 70px 56px;
       :nth-child(4) {
-        margin-bottom: calc_size(30);
+        margin-bottom: 30px;
       }
       :nth-child(5) {
-        margin-bottom: calc_size(92);
+        margin-bottom: 92px;
       }
 
       .starter_h2 {
         @include main-head(32, 38);
         text-align: center;
-        margin-bottom: calc_size(30);
+        margin-bottom: 30px;
       }
 
       .free-container {
-        padding: calc_size(2) 0;
+        padding: 2px 0;
         border: solid 1px $grey-border;
         align-self: center;
-        width: calc_size(50);
+        width: 50px;
         border-radius: 12px;
-        margin-bottom: calc_size(58);
+        margin-bottom: 58px;
 
         .main-head {
           @include main-text(11, 22);
@@ -521,7 +524,7 @@ header {
         @include main-text(20, 28);
         text-align: center;
         color: $gray;
-        margin-bottom: calc_size(50);
+        margin-bottom: 50px;
       }
 
       .motto {
@@ -529,23 +532,23 @@ header {
 
         .main-text {
           @include main-text(16, 24);
-          margin-left: calc_size(5);
+          margin-left: 5px;
           color: $black;
         }
 
         .check-icon {
-          width: calc_size(12);
+          width: 12px;
         }
       }
       .main-btn {
         align-self: center;
         @include main-btn($blue, 212, none);
         border-radius: 30px;
-        font-size: calc_size(16);
+        font-size: 16px;
         color: $white;
         outline: none;
         border: none;
-        padding: calc_size(12) 0;
+        padding: 12px 0;
         cursor: pointer;
       }
     }
@@ -556,23 +559,23 @@ header {
       -moz-box-shadow: none;
       box-shadow: none;
       :nth-child(4) {
-        margin-bottom: calc_size(30);
+        margin-bottom: 30px;
       }
       :nth-child(5) {
-        margin-bottom: calc_size(30);
+        margin-bottom: 30px;
       }
       :nth-child(6) {
-        margin-bottom: calc_size(41);
+        margin-bottom: 41px;
       }
       .pro {
         align-self: center;
         @include main-btn($gray900, 212, none);
         border-radius: 30px;
-        font-size: calc_size(16);
+        font-size: 16px;
         color: $blue;
         outline: none;
         border-color: $blue;
-        padding: calc_size(12) 0;
+        padding: 12px 0;
         cursor: pointer;
       }
     }
@@ -584,18 +587,18 @@ header {
     border-bottom: solid 1px;
     border-color: $gray500;
     .main-head {
-      padding-top: calc_size(91);
+      padding-top: 91px;
       @include main-head(42, 52);
       text-align: center;
-      padding-bottom: calc_size(51);
+      padding-bottom: 51px;
     }
 
     .search-bar {
-      margin-bottom: calc_size(30);
+      margin-bottom: 30px;
     }
     .main-text {
       @include main-text(14, 24);
-      padding-bottom: calc_size(90);
+      padding-bottom: 90px;
     }
   }
 }
@@ -603,32 +606,32 @@ header {
 .newprovidence-flex {
   display: flex;
   justify-content: center;
-  padding: calc-size(91) 0;
+  padding: 90px 0;
   border-bottom: solid 1px $gray500;
 
   .new-providence {
     display: flex;
     align-self: center;
     flex-direction: column;
-    padding-right: calc_size(334);
+    padding-right: 335px;
 
     .newprovidence-img {
-      width: calc_size(140);
-      padding-bottom: calc_size(37);
+      width: 140;
+      padding-bottom: 37px;
     }
 
     .main-text {
       @include main-text(14, 24);
-      padding-bottom: calc_size(37);
+      padding-bottom: 37px;
     }
     .apple-button {
-      width: calc_size(142);
-      padding-bottom: calc_size(42);
+      width: 142px;
+      padding-bottom: 42px;
     }
 
     .icons {
       display: flex;
-      column-gap: calc_size(30);
+      column-gap: 30px;
     }
   }
 }
@@ -636,11 +639,11 @@ header {
 .three-columns {
   display: flex;
   justify-content: space-between;
-  column-gap: calc_size(102);
+  column-gap: 102px;
   .coulumn {
     display: flex;
     flex-direction: column;
-    row-gap: calc_size(7);
+    row-gap: 7px;
 
     .title {
       @include main-text(16, 36);
@@ -657,12 +660,12 @@ header {
 .contact-design {
   display: flex;
   justify-content: space-between;
-  padding: calc_size(41) 0;
+  padding: 41px 0;
 
   .content-contact {
     display: flex;
-    column-gap: calc_size(5);
-    padding-top: calc_size(10);
+    column-gap: 5px;
+    padding-top: 10px;
 
     .main-text {
       @include main-text(14, 24);
@@ -680,16 +683,16 @@ header {
   .made-with {
     display: flex;
     align-items: center;
-    column-gap: calc_size(15);
+    column-gap: 15px;
 
     .main-text {
       @include main-text(15, 22);
-      padding-top: calc_size(8);
+      padding-top: 8px;
       text-transform: uppercase;
       color: black;
     }
     .craftwork {
-      width: calc_size(150);
+      width: 150px;
     }
   }
 }
@@ -697,8 +700,8 @@ header {
 @media screen and (max-width: 420px) {
   .searchbar-wrapper {
     .search-bar {
-      margin-bottom: calc_size(24);
-      width: calc_size(900);
+      margin-bottom: 24px;
+      width: 900px;
     }
   }
 
