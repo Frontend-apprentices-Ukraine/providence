@@ -5,6 +5,9 @@
 @import "functions.scss";
 
 // common styles
+html {
+  font-size: 16px;
+}
 a {
   text-decoration: none;
 }
@@ -86,7 +89,7 @@ header {
         align-items: center;
         border: none;
         cursor: pointer;
-        padding: 10px calc_size(22);
+        padding: calc_size(10) calc_size(22);
         @include main-btn($blue, 140, none);
         transition: 0.4s;
         &:hover {
@@ -111,7 +114,7 @@ header {
   }
   .video {
     position: relative;
-    padding: 17px 32px;
+    padding: calc_size(17) calc_size(32);
     text-transform: capitalize;
     color: $black;
     margin-bottom: 505px;
@@ -123,14 +126,14 @@ header {
     }
     &:after {
       position: absolute;
-      top: 14px;
-      left: 20px;
+      top: calc_size(16);
+      left: calc_size(20);
       content: "";
       width: 0;
       height: 0;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-left: 11px solid $black;
+      border-top: calc_size(10) solid transparent;
+      border-bottom: calc_size(10) solid transparent;
+      border-left: calc_size(11) solid $black;
     }
   }
   .head-img {
@@ -156,7 +159,7 @@ header {
       margin-bottom: 51px;
     }
     .main-text-sm {
-      max-width: 495px;
+      width: calc_size(495);
       margin-bottom: 40px;
       color: $gray;
     }
@@ -164,7 +167,7 @@ header {
 }
 .container-fluid {
   position: relative;
-  padding: 66px 0 0px;
+  padding: 66px 0 50px;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -177,15 +180,16 @@ header {
       text-align: left;
     }
     .main-text {
-      max-width: 470px;
+      width: calc_size(470);
       color: $gray;
       margin-bottom: 45px;
       text-align: left;
+      margin: 0 calc_size(20) 0;
     }
     .partners {
       font-family: $latoBold;
-      font-size: 12px;
-      line-height: 22px;
+      font-size: calc_size(12);
+      line-height: calc_size(22);
       font-weight: bold;
       margin-bottom: 35px;
     }
@@ -265,25 +269,6 @@ header {
     cursor: pointer;
   }
 }
-
-.main-head {
-  @include main-head(
-    1,
-    1
-  ); // - arguments inserted to show that compiler works properly, else gets error
-}
-
-.main-text {
-  @include main-text(20, 28);
-  color: $gray; // - arguments inserted to show that compiler works properly, else gets error
-}
-
-//test if css link and font link are properly attached to html, delete if color and font appears properly
-
-html {
-  overflow-x: hidden;
-}
-
 .beautiful-interface {
   padding-top: calc_size(144);
   background-color: $gray-background;
@@ -996,6 +981,140 @@ html {
         .craftwork {
           width: 70px;
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    .head-menu {
+      .menu-item {
+        display: none;
+      }
+    }
+    .main-text {
+      @include main-text(30, 40);
+    }
+  }
+
+  .protected {
+    .text-wraper {
+      .main-head {
+        @include main-head(38, 45);
+      }
+
+      .main-text-sm {
+        width: calc_size(800);
+        @include main-text(30, 40);
+      }
+    }
+    .container-fluid {
+      .text-container {
+        min-width: 40vw;
+      }
+      .main-text {
+        width: 38vw;
+        @include main-text(30, 40);
+      }
+    }
+  }
+  .anyware {
+    .text-container {
+      .main-head {
+        @include main-head(38, 45);
+      }
+      .main-text {
+        @include main-text(30, 40);
+      }
+      .partners {
+        font-size: calc_size(25);
+        line-height: calc_size(52);
+      }
+    }
+  }
+  .fluid-image {
+    min-width: 40vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .protected {
+    .text-wraper {
+      flex-direction: column;
+      align-items: center;
+      .text-section {
+        .main-head {
+          font-size: 23px;
+          line-height: 30px;
+          text-align: center;
+        }
+        width: 100%;
+        .main-text-sm {
+          font-size: 16px;
+          line-height: 26px;
+          text-align: center;
+          width: 100%;
+        }
+      }
+      .main-head {
+        @include main-head(60, 45);
+        text-align: center;
+      }
+      .main-text {
+        .main-text {
+          @include main-text(60, 75);
+        }
+      }
+      .btn-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .container-fluid {
+      flex-direction: column;
+      align-items: center;
+      .main-head {
+        font-size: 23px;
+        line-height: 30px;
+        text-align: center;
+        max-width: 100%;
+      }
+      .main-text {
+        font-size: 16px;
+        width: 100%;
+        padding: 0 10px;
+        line-height: 26px;
+        text-align: center;
+      }
+    }
+  }
+  .anyware {
+    .container-fluid {
+      flex-direction: column;
+      align-items: center;
+      .text-container {
+        width: 100%;
+        .main-head {
+          font-size: 23px;
+          line-height: 30px;
+          text-align: center;
+          max-width: 100%;
+        }
+        .main-text {
+          font-size: 16px;
+          width: 100%;
+          padding: 0 10px;
+          line-height: 26px;
+          text-align: center;
+        }
+        .partners {
+          font-size: 16px;
+          line-height: 32px;
+          text-align: center;
+        }
+      }
+      .partner-wraper {
+        width: 100%;
+        padding: 30px 10px;
       }
     }
   }

@@ -1,4 +1,8 @@
+// @function calc_size($result) {
+//   $size: $result * 100 * 1vw/1920;
+//   @return $size;
+// }
 @function calc_size($result) {
-  $size: $result * 100 * 1vw/1920;
+  $size: ($result/16) + rem;
   @return $size;
 }
