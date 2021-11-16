@@ -696,6 +696,8 @@ header .head-img {
   -webkit-box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
           box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .perfect-plan .plan-flexbox .you-are .switch-toggles .individual .main-text {
@@ -710,6 +712,8 @@ header .head-img {
   padding: 10px 28px;
   border-radius: 26px;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .perfect-plan .plan-flexbox .you-are .switch-toggles .main-text {
@@ -717,6 +721,18 @@ header .head-img {
   font-size: 0.75rem;
   line-height: 1.375rem;
   text-transform: capitalize;
+}
+
+.perfect-plan .plan-flexbox .you-are .active .individual {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.perfect-plan .plan-flexbox .you-are .active .company {
+  background-color: #fff;
+  -webkit-box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
 }
 
 .perfect-plan .plan-flexbox .you-are .slogo {
