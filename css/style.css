@@ -1217,15 +1217,17 @@ html {
     font-size: 10px;
   }
   .perfect-plan .container .plan-flexbox .starter {
+    padding: 60px 0;
     width: 200px;
     text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border-radius: 0px;
   }
   .perfect-plan .container .plan-flexbox .starter .starter_h2 {
     font-size: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
   }
   .perfect-plan .container .plan-flexbox .starter .free-container {
     width: 50px;
