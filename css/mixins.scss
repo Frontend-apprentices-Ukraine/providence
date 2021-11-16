@@ -26,6 +26,6 @@
   @include btn-text;
   border-radius: 20px;
   background-color: $bgc;
-  width: calc_size($w);
+  max-width: calc_size($w);
   border-color: $brdCl;
 }

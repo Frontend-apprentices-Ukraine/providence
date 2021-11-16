@@ -5,6 +5,9 @@
 @import "functions.scss";
 
 // common styles
+html {
+  font-size: 16px;
+}
 a {
   text-decoration: none;
 }
@@ -86,7 +89,7 @@ header {
         align-items: center;
         border: none;
         cursor: pointer;
-        padding: 10px calc_size(22);
+        padding: 10px 22px;
         @include main-btn($blue, 140, none);
         transition: 0.4s;
         &:hover {
@@ -94,7 +97,7 @@ header {
         }
         color: $white;
         span {
-          padding-left: calc_size(13);
+          padding-left: 13px;
         }
       }
     }
@@ -106,8 +109,9 @@ header {
   }
   .main-text {
     text-align: center;
-    max-width: calc_size(780);
+    max-width: 780px;
     margin-bottom: 60px;
+    color: $gray600;
   }
   .video {
     position: relative;
@@ -123,8 +127,8 @@ header {
     }
     &:after {
       position: absolute;
-      top: 14px;
-      left: 20px;
+      top: calc_size(16);
+      left: calc_size(15);
       content: "";
       width: 0;
       height: 0;
@@ -150,10 +154,14 @@ header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 86px;
+    margin: 0 15px;
     .main-head {
       @include main-head(26, 34);
       color: $black200;
       margin-bottom: 51px;
+    }
+    .text-section {
+      margin: 0 15px;
     }
     .main-text-sm {
       max-width: 495px;
@@ -163,33 +171,42 @@ header {
   }
 }
 .container-fluid {
-  position: relative;
-  padding: 66px 0 0px;
+  padding: 66px 0 50px;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  .iphone {
+    max-width: 800px;
+    transform: translateX(-20%);
+  }
+  .map {
+    transform: translateX(20%);
+  }
   .fluid-image,
   .text-container {
-    min-width: calc_size(500);
+    max-width: 800px;
     .main-head {
-      max-width: 230px;
+      margin-left: 10px;
       margin-bottom: 85px;
       text-align: left;
     }
     .main-text {
-      max-width: 470px;
+      max-width: 490px;
       color: $gray;
       margin-bottom: 45px;
       text-align: left;
+      margin: 0 10px 20px 10px;
     }
     .partners {
       font-family: $latoBold;
       font-size: 12px;
       line-height: 22px;
       font-weight: bold;
+      margin-left: 10px;
       margin-bottom: 35px;
     }
     .partner-wraper {
+      padding: 0 10px;
       display: inline-flex;
       justify-content: space-between;
       img {
@@ -202,16 +219,25 @@ header {
     .btn-container {
       margin-top: 30px;
       .try {
-        padding: 15px calc_size(18) 15px calc_size(27);
+        padding: 15px 18px 15px 27px;
         color: $white;
-        @include main-btn($blue, 203, transparent);
+        @include main-btn($blue, 213, transparent);
         transition: 0.4s;
         &:hover {
           transform: scale(1.02);
         }
+        span {
+          vertical-align: middle;
+          display: inline-block;
+        }
+        img {
+          vertical-align: middle;
+          height: 20px;
+          width: 30px;
+        }
       }
       .learn {
-        padding: 13px calc_size(15);
+        padding: 13px 15px;
         color: $black200;
         border: 1px solid $gray200;
         @include main-btn(transparent, 145, $gray200);
@@ -224,6 +250,7 @@ header {
     }
   }
 }
+
 .searchbar-wrapper {
   display: flex;
   align-items: center;
@@ -236,9 +263,9 @@ header {
     justify-content: space-between;
     border: solid 1px $grey-border;
     border-radius: 30px;
-    padding: calc_size(4) calc_size(6) calc_size(4) calc_size(26);
-    margin-bottom: calc_size(24);
-    width: calc_size(502);
+    padding: 4px 6px 4px 26px;
+    margin-bottom: 24px;
+    max-width: 502px;
   }
 
   .searchline {
@@ -256,51 +283,32 @@ header {
   .main-btn {
     @include main-btn($green, 163, none);
     border-radius: 30px;
-    font-size: calc_size(16);
+    font-size: 16px;
     color: $white;
     outline: none;
     border: none;
-    padding: calc_size(16) 0;
+    padding: 16px 20px;
     cursor: pointer;
   }
 }
-
-.main-head {
-  @include main-head(
-    1,
-    1
-  ); // - arguments inserted to show that compiler works properly, else gets error
-}
-
-.main-text {
-  @include main-text(20, 28);
-  color: $gray; // - arguments inserted to show that compiler works properly, else gets error
-}
-
-//test if css link and font link are properly attached to html, delete if color and font appears properly
-
-html {
-  overflow-x: hidden;
-}
-
 .beautiful-interface {
-  padding-top: calc_size(144);
+  padding-top: 144px;
   background-color: $gray-background;
 
   .main-head {
     @include main-head(42, 52);
     text-align: center;
-    padding-bottom: calc_size(93);
+    padding-bottom: 93px;
     position: relative;
 
     &::after {
       content: "";
-      height: calc_size(2);
-      width: calc_size(50);
+      height: 2px;
+      width: 50px;
       background-color: $after;
       position: absolute;
-      top: calc_size(84);
-      left: calc_size(925);
+      top: 85px;
+      left: 925px;
     }
   }
 
@@ -308,49 +316,38 @@ html {
     @include main-text(12, 22);
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: calc_size(47);
+    padding-bottom: 47px;
   }
 
   .images-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: calc_size(179);
-    column-gap: calc_size(110);
+    padding-bottom: 180px;
     background-color: #f5f5f8;
-
+    max-width: 100vw;
+    overflow: hidden;
     .phones {
-      width: calc_size(320);
-      -webkit-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
-      -moz-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
+      max-width: 320px;
+      margin: 0 30px;
       box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
-    }
-
-    .left-phones {
-      position: absolute;
-      left: -4.3vw;
-    }
-
-    .small-phone {
-      width: calc_size(320);
-      -webkit-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
-      -moz-box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
-      box-shadow: 21px 27px 49px 20px rgba(34, 60, 80, 0.12);
-    }
-    .right-phones {
-      position: absolute;
-      left: 86.7vw;
+      &:first-child {
+        margin-left: -30%;
+      }
+      &:last-child {
+        margin-right: -30%;
+      }
     }
   }
   .main-head {
-    padding-bottom: calc_size(57);
+    padding-bottom: 57px;
     &::after {
       display: none;
     }
   }
 
   .main-text {
-    padding-bottom: calc_size(24);
+    padding-bottom: 24px;
   }
 
   .searchline {
@@ -358,34 +355,34 @@ html {
   }
 
   .apple-button {
-    width: calc_size(211);
-    padding-bottom: calc_size(131);
+    width: 210px;
+    padding-bottom: 131px;
   }
 }
 
 .slider {
-  padding-top: calc_size(130);
+  padding-top: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: calc_size(79);
+  padding-bottom: 79px;
 
   .left-arrow {
-    width: calc_size(23);
-    padding-right: calc_size(130);
+    width: 23px;
+    padding-right: 130px;
   }
 
   .right-arrow {
-    width: calc_size(23);
+    width: 23px;
   }
 
-  .people {
-    padding-right: calc_size(133);
+  .people img {
+    height: 130px;
+    width: 130px;
 
-    :nth-child(3) {
-      border-radius: 50%;
-      width: calc_size(200);
-    }
+    opacity: 0.5;
+    border-radius: 50%;
+    overflow: hidden;
   }
 }
 
@@ -394,64 +391,63 @@ html {
 
   .main-head {
     @include main-head(32, 38);
-    padding-bottom: calc_size(56);
+    padding-bottom: 55px;
   }
 
   .main-text {
-    padding-bottom: calc_size(35);
+    padding-bottom: 35px;
   }
 
   .star {
-    width: calc_size(22);
-    padding-bottom: calc_size(70);
+    width: 22px;
+    padding-bottom: 70px;
   }
 
   .cameron {
-    padding-bottom: calc_size(129);
+    padding-bottom: 129px;
     text-transform: uppercase;
     color: $black;
-    font-size: calc_size(12);
-    line-height: calc_size(22);
+    font-size: 12px;
+    line-height: 22px;
   }
 }
 
 .perfect-plan {
   background-color: $gray-background;
+  padding: 161px 0;
   .plan-flexbox {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: calc_size(161) 0;
 
     .you-are {
       padding-top: 50px;
-      margin-right: calc_size(156);
+
       .main-head {
         @include main-head(42, 52);
-        padding-bottom: calc_size(75);
+        max-width: 360px;
+        padding-bottom: 75px;
       }
       .main-text {
         text-transform: uppercase;
         @include main-text(12, 22);
         color: $black;
-        padding-bottom: calc_size(27);
+        padding-bottom: 27px;
       }
       .switch-toggles {
         display: flex;
-        width: calc_size(213);
+        width: 213px;
         border: 1px solid $grey-border;
-        padding: calc_size(5) calc_size(3);
-        border-radius: calc_size(26);
-        margin-bottom: calc_size(80);
+        padding: 5px 3px;
+        border-radius: 26px;
+        margin-bottom: 80px;
 
         .individual {
-          padding: calc_size(10) calc_size(28);
+          padding: 10px 28px;
           background-color: $white;
-          border-radius: calc_size(26);
-          -webkit-box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
-          -moz-box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
+          border-radius: 26px;
           box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
           cursor: pointer;
-
           .main-text {
             @include main-text(12, 22);
             text-transform: capitalize;
@@ -459,9 +455,9 @@ html {
         }
 
         .company {
-          padding: calc_size(10) calc_size(28);
-          padding: calc_size(10) calc_size(28);
-          border-radius: calc_size(26);
+          padding: 10px 28px;
+          padding: 10px 28px;
+          border-radius: 26px;
           cursor: pointer;
         }
 
@@ -474,57 +470,50 @@ html {
         @include main-text(20, 28);
         text-transform: none;
         color: $gray;
-        padding-bottom: calc_size(51);
+        padding-bottom: 51px;
       }
 
-      .bigger-team {
-        display: flex;
-        gap: calc_size(3);
-
-        .main-text {
-          @include main-text(14, 24);
-          text-transform: none;
-          color: $gray;
-        }
+      .main-text {
+        @include main-text(14, 24);
+        text-transform: none;
+        color: $gray;
 
         .link {
           text-decoration: underline;
           @include main-text(14, 24);
           color: $blue;
+          margin-bottom: 30px;
         }
       }
     }
-
+    .starter-wraper {
+      display: inline-flex;
+    }
     .starter {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       background-color: $white;
       border-radius: 12px;
-      -webkit-box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
-      -moz-box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
       box-shadow: 11px 48px 71px -1px rgba(34, 60, 80, 0.2);
-      padding: calc_size(70) calc_size(56);
-      :nth-child(4) {
-        margin-bottom: calc_size(30);
-      }
-      :nth-child(5) {
-        margin-bottom: calc_size(92);
+      padding: 70px 56px;
+      width: 50%;
+      &:first-child {
+        transform: scale(1.1);
       }
 
-      .starter_h2 {
+      .starter-h2 {
         @include main-head(32, 38);
         text-align: center;
-        margin-bottom: calc_size(30);
+        margin-bottom: 30px;
       }
 
       .free-container {
-        padding: calc_size(2) 0;
+        padding: 2px 0;
         border: solid 1px $grey-border;
         align-self: center;
-        width: calc_size(50);
+        width: 50px;
         border-radius: 12px;
-        margin-bottom: calc_size(58);
+        margin-bottom: 58px;
 
         .main-head {
           @include main-text(11, 22);
@@ -537,31 +526,32 @@ html {
         @include main-text(20, 28);
         text-align: center;
         color: $gray;
-        margin-bottom: calc_size(50);
+        margin-bottom: 50px;
       }
 
       .motto {
         display: flex;
-
+        margin-bottom: 30px;
         .main-text {
           @include main-text(16, 24);
-          margin-left: calc_size(5);
+          margin-left: 5px;
+
           color: $black;
         }
 
         .check-icon {
-          width: calc_size(12);
+          width: 12px;
         }
       }
       .main-btn {
         align-self: center;
         @include main-btn($blue, 212, none);
         border-radius: 30px;
-        font-size: calc_size(16);
+        font-size: 16px;
         color: $white;
         outline: none;
         border: none;
-        padding: calc_size(12) 0;
+        padding: 12px 20px;
         cursor: pointer;
       }
     }
@@ -572,23 +562,23 @@ html {
       -moz-box-shadow: none;
       box-shadow: none;
       :nth-child(4) {
-        margin-bottom: calc_size(30);
+        margin-bottom: 30px;
       }
       :nth-child(5) {
-        margin-bottom: calc_size(30);
+        margin-bottom: 30px;
       }
       :nth-child(6) {
-        margin-bottom: calc_size(41);
+        margin-bottom: 41px;
       }
       .pro {
         align-self: center;
         @include main-btn($gray900, 212, none);
         border-radius: 30px;
-        font-size: calc_size(16);
+        font-size: 16px;
         color: $blue;
         outline: none;
         border-color: $blue;
-        padding: calc_size(12) 0;
+        padding: 12px 20px;
         cursor: pointer;
       }
     }
@@ -600,66 +590,72 @@ html {
     border-bottom: solid 1px;
     border-color: $gray500;
     .main-head {
-      padding-top: calc_size(91);
+      padding-top: 91px;
       @include main-head(42, 52);
       text-align: center;
-      padding-bottom: calc_size(51);
+      padding-bottom: 51px;
     }
 
     .search-bar {
-      margin-bottom: calc_size(30);
+      margin-bottom: 30px;
     }
     .main-text {
       @include main-text(14, 24);
-      padding-bottom: calc_size(90);
+      padding-bottom: 90px;
     }
   }
 }
 
 .newprovidence-flex {
   display: flex;
-  padding: calc-size(91) 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 90px 0;
   border-bottom: solid 1px $gray500;
 
   .new-providence {
-    display: flex;
-    flex-direction: column;
-    padding-right: calc_size(334);
-
     .newprovidence-img {
-      width: calc_size(140);
-      padding-bottom: calc_size(37);
+      width: 140;
+      padding-bottom: 37px;
     }
 
     .main-text {
       @include main-text(14, 24);
-      padding-bottom: calc_size(37);
+      padding-bottom: 37px;
     }
     .apple-button {
-      width: calc_size(142);
-      padding-bottom: calc_size(42);
+      display: block;
+      width: 142px;
+      padding-bottom: 42px;
     }
 
     .icons {
       display: flex;
-      column-gap: calc_size(30);
+      justify-content: space-between;
     }
   }
 }
 
 .three-columns {
-  display: flex;
+  max-width: 600px;
+  padding: 5px 10px;
+  flex-grow: 1;
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  column-gap: calc_size(102);
+
   .coulumn {
-    display: flex;
+    display: inline-flex;
+
+    padding: 0 10px;
     flex-direction: column;
-    row-gap: calc_size(7);
+    row-gap: 7px;
 
     .title {
-      @include main-text(16, 36);
+      @include main-text(16, 0);
       text-transform: uppercase;
       color: $black;
+      margin-bottom: 20px;
     }
     .items {
       @include main-text(16, 36);
@@ -671,12 +667,12 @@ html {
 .contact-design {
   display: flex;
   justify-content: space-between;
-  padding: calc_size(41) 0;
+  padding: 41px 0;
 
   .content-contact {
     display: flex;
-    column-gap: calc_size(5);
-    padding-top: calc_size(10);
+    column-gap: 5px;
+    padding-top: 10px;
 
     .main-text {
       @include main-text(14, 24);
@@ -694,16 +690,153 @@ html {
   .made-with {
     display: flex;
     align-items: center;
-    column-gap: calc_size(15);
+    column-gap: 15px;
 
     .main-text {
       @include main-text(15, 22);
-      padding-top: calc_size(8);
+      padding-top: 8px;
       text-transform: uppercase;
       color: black;
     }
     .craftwork {
-      width: calc_size(150);
+      width: 150px;
     }
+  }
+}
+@media screen and (max-width: 1060px) {
+  .perfect-plan {
+    .plan-flexbox {
+      flex-direction: column;
+      justify-content: center;
+      .you-are {
+        .main-head {
+          max-width: 100%;
+          text-align: center;
+        }
+        .main-text {
+          text-align: center;
+        }
+      }
+      .switch-toggles {
+        margin: 0 auto 80px;
+      }
+      .starter-wraper {
+        padding: 30px 0;
+        justify-content: center;
+      }
+      .starter {
+        max-width: 340px;
+        padding: 50px 36px;
+      }
+    }
+  }
+}
+@media screen and(max-width: 830px) {
+  html {
+    font-size: 14px;
+  }
+  header {
+    .head-menu {
+      .menu-item {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .protected {
+    .text-wraper {
+      flex-direction: column;
+      align-items: center;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      .main-head {
+        text-align: center;
+      }
+      .main-text-sm {
+        text-align: center;
+      }
+    }
+  }
+  .container-fluid {
+    flex-direction: column;
+    align-items: center;
+    .iphone {
+      transform: translateX(0);
+      margin-bottom: 30px;
+    }
+    .text-container {
+      .main-head {
+        text-align: center;
+      }
+      .main-text {
+        text-align: center;
+      }
+    }
+    .btn-container {
+      text-align: center;
+    }
+    .partners {
+      text-align: center;
+    }
+    .partner-wraper {
+      width: 100%;
+      text-align: center;
+    }
+    .map {
+      margin-top: 20px;
+      transform: translateX(0);
+    }
+  }
+  .perfect-plan {
+    .plan-flexbox {
+      .starter-wraper {
+        flex-direction: column;
+        align-items: center;
+        .starter {
+          margin: 30px 0;
+        }
+      }
+    }
+  }
+  .newprovidence-flex {
+    .new-providence {
+      .icons {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    .header-head {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+  .main-head {
+    font-size: 25px;
+  }
+  .newprovidence-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .three-columns {
+    flex-direction: column;
+    align-items: center;
+    .coulumn {
+      width: 100%;
+    }
+    .title {
+      margin: 20px 0;
+    }
+  }
+  .contact-design {
+    flex-direction: column;
   }
 }
