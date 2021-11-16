@@ -221,10 +221,19 @@ header {
       .try {
         padding: 15px 18px 15px 27px;
         color: $white;
-        @include main-btn($blue, 203, transparent);
+        @include main-btn($blue, 213, transparent);
         transition: 0.4s;
         &:hover {
           transform: scale(1.02);
+        }
+        span {
+          vertical-align: middle;
+          display: inline-block;
+        }
+        img {
+          vertical-align: middle;
+          height: 20px;
+          width: 30px;
         }
       }
       .learn {
@@ -742,6 +751,10 @@ header {
     .text-wraper {
       flex-direction: column;
       align-items: center;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
       .main-head {
         text-align: center;
       }

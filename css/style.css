@@ -364,7 +364,7 @@ header .head-img {
   font-weight: 400;
   border-radius: 20px;
   background-color: #267df4;
-  max-width: 12.6875rem;
+  max-width: 13.3125rem;
   border-color: transparent;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -374,6 +374,19 @@ header .head-img {
 .container-fluid .text-container .btn-container .try:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+}
+
+.container-fluid .fluid-image .btn-container .try span,
+.container-fluid .text-container .btn-container .try span {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.container-fluid .fluid-image .btn-container .try img,
+.container-fluid .text-container .btn-container .try img {
+  vertical-align: middle;
+  height: 20px;
+  width: 30px;
 }
 
 .container-fluid .fluid-image .btn-container .learn,
@@ -1093,6 +1106,10 @@ header .head-img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .protected .text-wraper img {
+    display: block;
+    margin: 0 auto;
   }
   .protected .text-wraper .main-head {
     text-align: center;
