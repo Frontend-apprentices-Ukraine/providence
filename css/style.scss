@@ -448,6 +448,7 @@ header {
           border-radius: 26px;
           box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
           cursor: pointer;
+          transition: 0.2s;
           .main-text {
             @include main-text(12, 22);
             text-transform: capitalize;
@@ -459,11 +460,22 @@ header {
           padding: 10px 28px;
           border-radius: 26px;
           cursor: pointer;
+          transition: 0.2s;
         }
 
         .main-text {
           @include main-text(12, 22);
           text-transform: capitalize;
+        }
+      }
+      .active {
+        .individual {
+          background-color: transparent;
+          box-shadow: none;
+        }
+        .company {
+          background-color: #fff;
+          box-shadow: 23px 27px 73px 0px rgba(34, 60, 80, 0.2);
         }
       }
       .slogo {

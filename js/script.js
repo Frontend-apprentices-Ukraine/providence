@@ -1,3 +1,5 @@
 $(document).ready(function () {
-  alert();
+  $(".switch-toggles").click(function () {
+    $(this).toggleClass("active");
+  });
 });
